@@ -19,7 +19,6 @@ namespace TravelDiary.Models
 
         public static List<Place> GetAll()
         {
-            placesList = new List<Place> {};
             return placesList;
         }
 
