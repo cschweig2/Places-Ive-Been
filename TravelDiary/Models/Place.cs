@@ -5,11 +5,13 @@ namespace TravelDiary.Models
     public class Place
     {
         public string CityName;
+        public string ImageUrl;
         private int id;
 
-        public Place(string cityName)
+        public Place(string cityName, string imageUrl)
         {
             CityName = cityName;
+            ImageUrl = "https://images.app.goo.gl/JPMDgENY2nNjAy7i8";
             id = 0;
         }
 
