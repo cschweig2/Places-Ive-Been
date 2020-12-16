@@ -1,0 +1,16 @@
+@using TravelDiary.Models;
+
+<h1>Places I've Been</h1>
+
+@if (Model.Count == 0)
+{
+    <p>I haven't been anywhere yet :( </p>
+}
+<ul>
+    @foreach (Place places in Model)
+    {
+        <li>@places.CityName</li>
+        <li>@places.ImageUrl</li>
+    }
+</ul>
+<a href="/places/new">Add a new place</a>
