@@ -1,0 +1,5 @@
+*/obj/
+*/bin/
+.vs_code
+.vscode
+coverage.json
