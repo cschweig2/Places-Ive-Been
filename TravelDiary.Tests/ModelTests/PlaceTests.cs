@@ -37,5 +37,14 @@ namespace TravelDiary.Tests
       Assert.AreEqual(imageUrl, result);
     }
 
+    [TestMethod]
+    public void GetAll_ReturnsListPopulatedWithAllPlaceInstances_List()
+    {
+      Place newPlace01 = new Place("Boise", "pictureUrl01");
+      Place newPlace02 = new Place("Denver", "pictureUrl06");
+      List<Place> expectedList = new List<Place> {newPlace01, newPlace02};  
+      List<Place> result = Place.GetAll();
+      CollectionAssert.AreEqual(expectedList, result);
+    }
   }
 }
