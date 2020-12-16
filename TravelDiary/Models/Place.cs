@@ -9,7 +9,7 @@ namespace TravelDiary.Models
 
         public Place(string cityName)
         {
-            CityName = "Mumbai";
+            CityName = cityName;
             id = 0;
         }
 
