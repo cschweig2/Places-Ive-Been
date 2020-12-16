@@ -11,7 +11,7 @@ namespace TravelDiary.Models
         public Place(string cityName, string imageUrl)
         {
             CityName = cityName;
-            ImageUrl = "https://images.app.goo.gl/JPMDgENY2nNjAy7i8";
+            ImageUrl = imageUrl;
             id = 0;
         }
 
