@@ -6,8 +6,13 @@ using System;
 namespace TravelDiary.Tests
 {
   [TestClass]
-  public class TravelDiaryTests
+  public class TravelDiaryTests : IDisposable
   {
+    public void Dispose()
+    {
+      Place.ClearAll();
+    }
+    
     [TestMethod]
     public void CreateAPlace_ReturnsNewInstanceOfPlace_Place()
     {
@@ -40,10 +45,22 @@ namespace TravelDiary.Tests
     [TestMethod]
     public void GetAll_ReturnsListPopulatedWithAllPlaceInstances_List()
     {
-      Place newPlace01 = new Place("Boise", "pictureUrl01");
-      Place newPlace02 = new Place("Denver", "pictureUrl06");
-      List<Place> expectedList = new List<Place> {newPlace01, newPlace02};  
+      string cityName01 = "Boise";
+      string cityName02 = "Denver";
+      string imgUrl01 = "dummyUrl01";
+      string imgUrl02 = "dummyUrl02";
+      Place newPlace01 = new Place(cityName01, imgUrl01);
+      Place newPlace02 = new Place(cityName02, imgUrl02);
+      List<Place> expectedList = new List<Place> {newPlace01, newPlace02};
+      foreach (Place instance in expectedList)
+      {
+        Console.WriteLine("myPlacesInExpected List includes {0}", instance);
+      }
       List<Place> result = Place.GetAll();
+      foreach (Place instance in result)
+      {
+        Console.WriteLine("myPlacesInResult List includes {0}", instance);
+      }
       CollectionAssert.AreEqual(expectedList, result);
     }
   }
