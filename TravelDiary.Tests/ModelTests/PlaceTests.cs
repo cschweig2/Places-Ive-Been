@@ -63,5 +63,15 @@ namespace TravelDiary.Tests
       }
       CollectionAssert.AreEqual(expectedList, result);
     }
+
+    [TestMethod]
+    public void GetId_ReturnsIdOfPlaceInstance_Int()
+    {
+      string cityName = "Philly";
+      string imgUrl = "https://dummyimg.com";
+      Place newPlace = new Place(cityName, imgUrl);
+      int result = newPlace.Id;
+      Assert.AreEqual(1, result);
+    }
   }
 }

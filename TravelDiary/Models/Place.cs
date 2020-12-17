@@ -6,7 +6,7 @@ namespace TravelDiary.Models
     {
         public string CityName {get; set;}
         public string ImageUrl {get; set;}
-        // private int id {get;}
+        public int Id {get;}
         public static List<Place> placesList = new List<Place> {};
 
         public Place(string cityName, string imageUrl)
@@ -14,7 +14,7 @@ namespace TravelDiary.Models
             CityName = cityName;
             ImageUrl = imageUrl;
             placesList.Add(this);
-            // id = 0;
+            Id = 2;
         }
 
         public static List<Place> GetAll()
@@ -26,5 +26,6 @@ namespace TravelDiary.Models
         {
             placesList.Clear();
         }
+
     }
 }
