@@ -10,7 +10,7 @@
     @foreach (Place places in Model)
     {
         <li>@places.CityName</li>
-        <li>@places.ImageUrl</li>
+        <li><img src="@places.ImageUrl" alt="image of your @places.CityName"></li>
     }
 </ul>
 <a href="/places/new">Add a new place</a>
