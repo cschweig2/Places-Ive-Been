@@ -14,7 +14,7 @@ namespace TravelDiary.Models
             CityName = cityName;
             ImageUrl = imageUrl;
             placesList.Add(this);
-            Id = 2;
+            Id = placesList.Count;
         }
 
         public static List<Place> GetAll()
